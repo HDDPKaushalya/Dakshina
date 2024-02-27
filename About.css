@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Protest Riot', sans-serif;
+    List-style: none;
+    text-decoration: none;
+
+}
+.container{
+    scroll-snap-type: y mandatory;
+
+    height: 100vh;
+}
+header{
+     position: fixed;
+     right: 0;
+     top: 0;
+     z-index: 1000;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 33px 9%;
+     background: transparent;
+
+
+
+ }
+
+.logo{
+    font-size:30px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+    text-shadow: 1px 1px 4px black;
+}
+.navlist a:hover{
+    border-bottom: 2px solid white;
+}
+
+.navlist a.ct i{
+    vertical-align: middle;
+    margin-right: 5px;
+
+}
+
+#menu-icon{
+    color: white;
+    font-size: 30px;
+    z-index: 10001;
+    cursor:pointer;
+    display: none;
+}
+.hero1{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,12,1) 11%, rgba(0,212,255,1) 100%);
+    position: running(3);
+    display: grid;
+    grid-template-columns:repeat(2 ,1fr);
+    align-items: center;
+    gap: 2rem;
+    color: black;
+
+}
+.hero2{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(6,0,0);
+    background: linear-gradient(90deg, rgba(6,0,0,1) 0%, rgba(123,138,2,1) 50%, rgba(220,229,18,0.815091002221201) 100%);
+    display: grid;
+    grid-template-columns:repeat(2 ,1fr);
+    align-items: center;
+    gap: 2rem;
+    color: black;
+}
+.hero3{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,18,43,1) 50%, rgba(4,17,134,0.815091002221201) 100%);
+    position: running(3);
+    display: grid;
+    grid-template-columns:repeat(2 ,1fr);
+    align-items: center;
+    gap: 2rem;
+    color: black;
+}
+section{
+    padding: 0 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+
+}
+.hero-text h5{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+    font-family: 'Mochiy Pop One',cursive;
+    text-shadow: 1px 1px 4px black;
+}
+.hero-text p{
+    font-size: 14px;
+    line-height: 1.9;
+    color: white;
+    margin-bottom: 40px;
+    margin-inline: auto;
+    font-family: 'Mochiy Pop One',cursive;
+    text-shadow: 1px 1px 4px black;
+}
+
+.hero-img img{
+    width: 250px;
+    height: auto;
+    margin-left: 50px;
+}
+.scroll-down{
+    position: absolute;
+    bottom:6%;
+    right: 9%;
+}
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background:#4d9559;
+    border-radius: 30px;
+    transition: all .50s ease;
+    position: p;
+
+
+}
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+
+
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+
+}
+@media (max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+    .hero-text{
+        padding-top:115px;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 560px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width: 990px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #4d9559;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
+@media (max-width: 680px){
+    .hero-img img{
+        width: 100%;
+        height: auto;
+
+    }
+}
+
